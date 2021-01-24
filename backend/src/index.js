@@ -5,6 +5,8 @@ import cookieParser from 'cookie-parser';
 import session from 'express-session';
 import dotenv from 'dotenv';
 import mongoose from 'mongoose';
+import passport from 'passport';
+import api from './api/index.js';
 
 // 환경변수 로드
 dotenv.config();
@@ -28,7 +30,6 @@ mongoose
 // ESM 오류 해결을 위해 __dirname, __filename 직접 변수 작성
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
-import api from './api/index.js';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
